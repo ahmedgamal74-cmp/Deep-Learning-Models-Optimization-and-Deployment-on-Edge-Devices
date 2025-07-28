@@ -24,7 +24,15 @@ Deep neural networks (DNNs) have achieved outstanding performance in numerous ap
 - Knowledge distillation (KD)
 - TensorRT acceleration
 
-These methods are applied to 5 popular architectures (VGG, MobileNet, NASNet, AlexNet, EfficientNet) and tested on Jetson Nano.
+These methods are applied to 5 popular architectures (VGG, MobileNet, NASNet, AlexNet, EfficientNet) and tested on Jetson Nano:
+- **AlexNet**
+- **VGG11 & VGG16**
+- **MobileNetV2**
+- **EfficientNet-B0**
+- **NASNet-Mobile**
+- **YOLOv8s**
+- **LLMs** (e.g., Qwen2.5-0.5B, TinyLlama-1.1B)
+
 
 In addition to the five CNN architectures, we deployed real-time applications to further evaluate the effectiveness of the optimization and deployment pipeline on the Jetson Nano. These applications include:
 
@@ -35,6 +43,29 @@ In addition to the five CNN architectures, we deployed real-time applications to
 - Face detection and recognition, using `facedetect` for detection and `InceptionResNetV1` for generating face embeddings
 
 These practical use cases demonstrate the feasibility and performance benefits of running optimized deep learning models on resource-constrained edge devices.
+
+---
+
+## 🔧 Optimization Techniques
+
+### 📏 Quantization
+- Post-training quantization (PTQ)
+- Quantization-aware training (QAT)
+- TensorRT precision calibration (INT8, FP16)
+
+### 🔧 Pruning
+- Structured channel pruning
+- Iterative pruning
+- FastNAS pruning
+- Torch-Pruning with dependency graphs
+
+### 🧊 Low-Rank Approximation
+- SVD-based layer compression
+- CP-like decomposition for Conv2D
+
+### 🧪 Knowledge Distillation
+- Student-teacher training with NASNet
+- Used for both classification and detection tasks
 
 ---
 
@@ -52,26 +83,22 @@ These practical use cases demonstrate the feasibility and performance benefits o
 - **LLMs on Jetson Nano**:  
   Benchmarked models like TinyLlama and Qwen2.5-0.5B with memory and latency evaluations for edge NLP.
 
----
+📊 **Full Excel Results Sheet:** [View on OneDrive](https://docs.google.com/spreadsheets/d/1Db0EXINeAfmpou3PeocLsoQTGAfQ5cSlHY8U9TEEHKI/edit?gid=0#gid=0)
 
-## 🔧 Optimization Techniques
-
-| Technique            | Description                                                       |
-|----------------------|-------------------------------------------------------------------|
-| **Pruning**          | Removes redundant weights or channels to reduce model size       |
-| **Quantization**     | Converts FP32 weights to INT8/FP16 for faster inference           |
-| **Low-Rank Approx.** | Factorizes large matrices using SVD for compression               |
-| **Knowledge Distill.** | Transfers knowledge from a large "teacher" model to a small "student" |
-| **TensorRT**         | NVIDIA's high-performance deep learning inference optimizer       |
+(See detailed tables in `/results` and thesis for full metrics)
 
 ---
 
-## ⚙️ Deployment Platform
+## ⚙️ Environment & Deployment Platform 
 
 - **Device**: NVIDIA Jetson Nano
 - **Power**: 5V 3A MicroUSB
 - **Frameworks**: PyTorch, TensorFlow Lite, ONNX, TensorRT
-- **OS**: Ubuntu 18.04 with JetPack SDK
+- **TensorRT** for high-speed inference
+- **ONNX Runtime** as baseline
+- **PyTorch** & **TensorFlow Lite** as training and conversion tools
+- **Datasets:** CIFAR-10, ImageNet, COCO, Pascal VOC
+- 
 
 ---
 
