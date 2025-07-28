@@ -1,6 +1,6 @@
 # Optimize and Deploy Deep Learning Models on Edge Devices
 
-Welcome to our official repository for the graduation project titled **"Optimize and Deploy Deep Learning Models on Edge Devices"**, developed by:
+Welcome to our official repository for the graduation project titled **"Optimize and Deploy Deep Learning Models on Edge Devices"**
   
 **Mentored by:** Si-Vision
 
