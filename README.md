@@ -99,7 +99,6 @@ These practical use cases demonstrate the feasibility and performance benefits o
 - **PyTorch** & **TensorFlow Lite** as training and conversion tools
 - **Datasets:** CIFAR-10, ImageNet, COCO, Pascal VOC
 - 
-
 ---
 
 ## 📬 Contact
