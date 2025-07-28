@@ -1,8 +1,18 @@
 # Optimize and Deploy Deep Learning Models on Edge Devices
 
+Welcome to our official repository for the graduation project titled **"Optimize and Deploy Deep Learning Models on Edge Devices"**, developed by:
+  
+**Mentored by:** Si-Vision
+
 ![alt text](images/cloudvsedge.png)
 
-This project explores optimization techniques to reduce the computational cost and memory footprint of deep learning models, enabling their deployment on resource-constrained edge devices such as the Raspberry Pi, NVIDIA Jetson Nano, and other embedded or low-power hardware platforms. In this work, we evaluate and test our pipeline specifically on the Jetson Nano.
+---
+
+## 📘 Abstract
+
+This project explores efficient deployment of deep learning models on resource-constrained edge devices, particularly the NVIDIA Jetson Nano. It addresses computational, memory, and energy limitations using a full pipeline of optimization techniques, including pruning, quantization, knowledge distillation, low-rank approximation, and TensorRT acceleration. We evaluated this pipeline on architectures like VGG11, MobileNetV2, EfficientNet, NASNet, and AlexNet, achieving up to 18× speedup with minimal accuracy loss.
+
+---
 
 ## 📌 Overview
 
@@ -62,17 +72,6 @@ These practical use cases demonstrate the feasibility and performance benefits o
 - **Power**: 5V 3A MicroUSB
 - **Frameworks**: PyTorch, TensorFlow Lite, ONNX, TensorRT
 - **OS**: Ubuntu 18.04 with JetPack SDK
-
----
-
-## 🧑‍💻 Authors
-
-- Ahmed G. Noureddine  
-- Khaled W. Metwally  
-- Abdelrahman M. ELsayed  
-- Mazen W. Diaa  
-- Mahmoud M. Gouda  
-- Youssef H. Mohamed
 
 ---
 
